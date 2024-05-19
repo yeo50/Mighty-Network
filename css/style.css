@@ -1,0 +1,3277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --violet-:#37146F;
+    --ltblue-:#0098A6;
+}
+body {
+  /* background: tomato; */
+  overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    /* background: red; */
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    padding: 0 3%;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.05);
+    flex-wrap: wrap;
+    z-index: 500;
+    /* overflow-x: scroll; */
+
+}
+header .header-logo_wrapper {
+    /* width: 46%; */
+    /* max-width: 45%; */
+    /* background: rgba(255, 0, 0, 0.486); */
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+ 
+    
+}
+header .header-logo_wrapper .logo-container {
+    width: 150px;
+    height: 80px;
+    cursor: pointer;
+    /* background: red; */
+    margin-right: 1rem;
+}
+
+header .header-logo_wrapper .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+header .header-logo_wrapper .navbar ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 .5rem;
+    /* background: red; */
+}
+header .header-logo_wrapper .navbar ul li a {
+    color: #000;
+   margin-left: 1.1rem;
+    font-size: 1.3rem;
+}
+header .header-logo_wrapper .navbar ul li a:hover {
+   border-bottom: 1px solid black;
+   padding-bottom: 0;
+}
+header .header-a_wrapper {
+    /* width: 25%; */
+    /* background: yellow; */
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* justify-self: flex-end; */
+}
+header .header-a_wrapper .sign-in {
+    text-align: center;
+    height: 50px;
+    /* width: 25%; */
+    border: 1px solid rgb(36, 14, 163);
+    border-radius: 5px;
+    line-height: 48px;
+    margin-right: 1rem;
+    font-size: 125%;
+    cursor: pointer;
+    padding:0 10px;
+    
+    
+}
+header .header-a_wrapper .start {
+    text-align: center;
+    color: #fff;
+    background: var(--violet-);
+    /* width: 70%; */
+    height: 50px;
+    border-radius: 5px;
+    line-height: 48px;
+    font-size: 125%;
+    cursor: pointer;
+    padding: 0 10px;
+
+}
+header .header-a_wrapper .fa-bars {
+    margin-left:1rem ;
+    display: none;
+    font-size: 1.6rem;
+    z-index: 20;
+ 
+}
+
+/* header style end  */
+.email-popup_container {
+ position: fixed;
+ bottom: 55px;
+ right: 50px;
+ z-index: 50;
+ 
+}
+.email-popup_container .email-popup {
+    width: 60px;
+    height: 60px;
+    border-radius: 55px;
+    background: var(--violet-);
+    line-height: 55px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-self: end;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 23px;
+    cursor: pointer;
+    transition:.3s linear 0s;
+    text-align: center;
+    transition-delay: .2s;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+.email-popup_container .email-popup:hover {
+    width: 250px;
+    /* justify-content: space-between; */
+}
+.email-popup_container .email-popup::before {
+    content: "community curious";
+    /* width: 300px; */
+    background: var(--violet-);
+    font-size: 1.3rem;
+    color: #fff;
+    height: 60px;
+    margin-right: 22px;
+    opacity: 1;
+    
+    /* transition: opacity .3s ease-in-out 0; */
+}
+
+
+
+/* banner style  */
+.banner {
+    /* position: relative; */
+    background: #D2F2F5;
+    min-height: 120vh auto;
+    margin-top: 80px;
+    padding: 0 3% 0 3%;
+    width: 100vw;
+    /* overflow-x: scroll; */
+}
+.banner .vector {
+    position: absolute;
+    top: 150px;
+    left: -550px;
+       
+}
+.banner .vector img {
+object-fit: contain;
+z-index: -1;
+
+}
+.banner .global-container {
+width: 100%;
+display: flex;
+/* background: red; */
+padding: 4rem 0;
+flex-wrap: wrap;
+/* overflow-x:scroll; */
+}
+.banner .global-container .text-container {
+    width: 42%;
+    display: inline-block;
+    z-index: 3;
+    /* background: yellow; */
+    margin-top: 1.5rem;
+    /* overflow-x: scroll; */
+    /* background: url('../img/Vector__1.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: -50px 300px; */
+}
+.banner .global-container .text-container h1 {
+    font-size: 3.1rem;
+    font-weight: bolder;
+    line-height: 1.2;
+}
+.banner .global-container .text-container h1 span {
+    color: var(--ltblue-);
+    text-decoration: underline;
+}
+.banner .global-container .text-container p {
+    font-size: 1.6rem;
+    margin: 1.2rem 0;
+}
+.banner .global-container .text-container a .span1 {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
+    background: var(--violet-);
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 1.3rem;
+    transition: .3s;
+
+}
+.banner .global-container .text-container a .span1:hover {
+    letter-spacing: .06rem;
+}
+.banner .global-container .text-container a .span2 {
+    color: #000000b6;
+    font-size: .8rem;
+    display: block;
+
+}
+.banner .global-container .text-container .stars i {
+    color: var(--ltblue-);
+    font-size: 1rem;
+    
+
+}
+.banner .global-container .text-container .stars {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: lowercase;
+    display: inline-block;
+    margin-right: 1.3rem;
+}
+.banner .global-container .text-container .stars span {
+    font-size: 1rem;
+    color: #000000c2;
+    font-weight: 200;
+    text-transform: lowercase;
+    margin-left: 1rem;
+}
+
+.banner .global-container .video-img_container {
+/* background: var(--ltblue-); */
+width: 54%;
+position: relative;
+/* padding: 0 1%; */
+/* overflow-x: scroll; */
+}
+.banner .global-container .video-img_container .png-img1 {
+    position: absolute;
+    top: 220px;
+    left: 0px;
+    z-index: 5;
+    width: 30%;
+    height: 17rem;
+}
+.banner .global-container .video-img_container .png-img1 img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+}
+.banner .global-container .video-img_container .png-img2 {
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    z-index: 4;
+    width: 30%;
+        height: 18rem;
+}
+.banner .global-container .video-img_container .png-img2 img {
+    width: 100%;height: 100%;
+    object-fit: contain;
+}
+.banner .global-container .video-img_container .thumbnail  {
+    position: absolute;
+    top: 92px;
+    left: 80px;
+    width: 85%;
+    height: 330px;
+    /* background: var(--violet-); */
+    border-radius: 10px;
+    z-index: 5;
+    /* position: relative; */
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail1 {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--violet-);
+    width: 90%;
+    height: 95%;
+    z-index: -1;
+  border-radius: 20px;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail1 .h1-wrapper {
+    /* background: green; */
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.banner .global-container .video-img_container .thumbnail .thumbnail1 h1 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.1;
+    /* background: red; */
+    display: inline-block;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail1 h1 span {
+    color: yellow;
+    font-weight: 500;
+
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail2 {
+    /* background: red; */
+    width: 100%;
+    height: 150%;
+    z-index: 11;
+    /* margin-right: -18rem; */
+    background: url('../img/ink2_3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 2px solid red; */
+    background-position: 0px 100px;
+    
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 10;
+    /* margin-right: -8rem; */
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background:url('../img/ink2_3.png'); */
+    /* background-size: contain; */
+    /* background: var(--violet-); */
+    z-index: 8;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail3 img {
+    width: 100%;
+        height: 100%;
+    object-fit: contain;
+    z-index: 8;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail4 {
+    position: absolute;
+    top:-100px ;
+    right: -60px;
+    width: 50%;
+    height: 50%;
+    z-index: 7;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail4 img {
+    width: 100%;
+    height: 250%;
+    object-fit: contain;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail5 {
+    width: 33%;
+    height: 33%;
+    position: absolute;
+    top: -60px;
+    right: -90px;
+    z-index: 9;
+
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail6 {
+    position: absolute;
+    top: 271px;
+    right:70px  ;
+    width: 200px;
+    height: 50px;
+    background: #fff;
+    color: var(--violet-);
+ 
+    border-radius: 30px;padding: 5px 10px;
+    line-height: 43px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 5px 5px 10px 5px rgba(128, 128, 128, 0.678);
+ 
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail6 a {
+    font-size: 1.3rem;
+   
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail7 {
+    position: absolute;
+    top:0;
+   right:300px;
+    z-index: 5;
+    width: 40px;
+    height: 80px;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail7 img {
+    width: 100%;
+    height: 100%;
+}
+/* banner section end here  */
+.testimonials {
+ 
+    min-height: 820px auto;
+    width: 100%;
+    position: relative;
+  
+}
+.testimonials .testimonials-inside {
+
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        z-index: 1;
+        height: 100%;
+        border: none;
+      }
+.testimonials .testimonials-inside .deco1 {
+    position: absolute;
+    bottom: 0px;
+    right: -120px;
+    width: 90%;
+    height: 70%;
+    z-index: 2;
+ 
+}
+.testimonials .testimonials-inside .deco1 img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.testimonials .testimonials-inside .deco2 {
+    position: absolute;
+        top: 0px;
+        right: -90px;
+        width: 50%;
+        height: 50%;
+        z-index: 3;
+}
+.testimonials .testimonials-inside .deco2 img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.testimonials .testimonials-inside .deco3 {
+    position: absolute;
+        bottom:-165px;
+        left: -150px;
+        width: 40%;
+        height: 70%;
+    
+        /* background: red; */
+}
+.testimonials .testimonials-inside .deco3 img {
+    object-fit: contain;
+background-position: 5rem 4rem;
+    width: 190%;
+    height: 100%;
+}
+.testimonials .testimonials-inside .deco4 {
+        position: absolute;
+        bottom: -50px;
+        left: -30px;
+        width: 30%;
+        height: 50%;
+            /* background: red; */
+}
+.testimonials .testimonials-inside .deco4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.testimonials .testimonials-inside .deco5 {
+    position: absolute;
+    right: -170px;
+    bottom: 30px;
+    width: 50%;
+    height: 60%;
+    z-index: 6;
+}
+.testimonials .testimonials-inside .deco5 img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+}
+.testimonials .global-container {
+    width: 100%;
+
+    background: var(--violet-);
+    height: 820px auto;
+    display: flex;
+    z-index: 2;
+    border-bottom: 10px solid #000;
+    
+}
+.testimonials .global-container .text {
+    width: 50%;
+    height: 820px auto;
+   padding-top: 5rem;
+   color: #fff;
+   /* z-index: -1; */
+   z-index: 1;
+   padding-left: 1.5rem;
+   
+}
+.testimonials .global-container .text h2 {
+   font-size: 2.5rem;
+   font-weight: bolder;
+   margin-bottom: 2rem;
+   width: 80%;
+   line-height: 1.2;
+   margin: 0 auto 2rem;
+}
+.testimonials .global-container .text p {
+    font-size: 1.3rem;
+    margin-bottom: 1.6rem;
+    width: 80%;
+    margin: 0 auto 2rem;
+
+}
+.testimonials .global-container .text .a-container {
+   
+    font-size: 1.6rem;
+    text-decoration: underline;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .testimonials .global-container .text .a-container a {
+    color: #fff;
+  }
+.testimonials .global-container .content {
+    width: 50%;
+    height: 100%;
+    height: 820px;
+    z-index: 2;
+    
+}
+.testimonials .global-container .content .card-container {
+    width: 23rem;
+    height: 100%;
+    margin: 0 auto;
+ /* background: red; */
+    overflow: scroll;
+    padding: 0 .5rem;
+}
+.testimonials .global-container .content .card-container::-webkit-scrollbar  {
+    width:0px;
+}
+.testimonials .global-container .content .card-container .card {
+    width: 22rem;
+    height: 25rem;
+    background: #fff;
+    margin:2rem  0;
+    border-radius: 20px;
+    padding: 2rem 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 8;
+    animation: yeo 15s linear 0s infinite;
+ }
+ .testimonials .global-container .content .card-container .card .review-people {
+    width: 100%;
+    height: 90px;
+    
+ }
+
+.testimonials .global-container .content .card-container .card .review-people .img-container {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: inline-block;
+    background: yellow;
+}
+.testimonials .global-container .content .card-container .card .review-people .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.testimonials .global-container .content .card-container .card .review-people .review-head {
+    display: inline-block;
+    vertical-align: top;
+  margin-left: 15px;
+ 
+}
+
+.testimonials .global-container .content .card-container .card .review-people .review-head h3 {
+    font-size: 1.1rem;
+    
+   
+}
+.testimonials .global-container .content .card-container .card .review-people .review-head h4 {
+
+    font-size: .9rem;
+    color: #000000b6;
+}
+.testimonials .global-container .content .card-container .card p {
+    font-size: 1.1rem;
+}
+.testimonials .global-container .content .card-container .card  .img1 img{
+    /* object-fit: contain; */
+    object-position:0 .4px;
+}
+/* testimonial section end here..... */
+/* logoshowase section start.... */
+.logoshowcase {
+    height: 245px auto;
+    width: 100%;
+    background: #000;
+    /* margin-top: -10rem; */
+    z-index: 3;
+    padding: 1.5rem ;
+}
+.logoshowcase .global-container {
+    display: flex;
+    flex-direction: column;
+}
+.logoshowcase .global-container p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.logoshowcase .global-container .logo-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.logoshowcase .global-container .logo-container .logo {
+    width: 130px;
+    height: 80px;
+    margin: .5rem .4rem;
+}
+.logoshowcase .global-container .logo-container .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.logoshowcase .global-container .logo-container .logo1 {
+    width: 90px;
+    height: 80px;
+ 
+}
+.logoshowcase .global-container .logo-container .logo5 {
+    width: 90px;
+}
+.logoshowcase .global-container .logo-container .logo9 {
+    width: 90px;
+}
+.videoexplain {
+    height: 740px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.videoexplain .video-content {
+    padding-top: 20px;
+    width: 100%;
+    height:740px auto;
+    place-self: center;
+/* 
+    background: red; */
+}
+.videoexplain .video-content .video {
+    width: 63%;
+    height: 740px;
+
+    position: relative;
+    margin:0 auto;
+    /* background: rebeccapurple; */
+}
+.videoexplain .video-content .video svg {
+    width: 296px;
+    /* height: 1800px; */
+    position: absolute;
+    top: 40%;left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+}
+.videoexplain .video-content .video video {
+    width: 286px;
+    height: 580px;
+    position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        border-radius: 20px;
+}
+
+.videoexplain .text-content .text-container {
+    width: 80%;
+    height: 600px;
+    margin: 8rem auto;
+    /* background: red; */
+    padding: 2rem 10px;
+
+}
+.videoexplain .text-content .text-container h2 {
+    font-size: 2rem;
+    color: #2D263B;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+.videoexplain .text-content .text-container h3 {
+    font-size: 1.5rem;
+    color: #2D263B;
+    margin-bottom: 1.5rem;
+}
+.videoexplain .text-content .text-container p {
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+.videoexplain .text-content .text-container a {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.phoneimage {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    background: #141921;
+}
+.phoneimage .text {
+    padding: 3rem 0;
+}
+.phoneimage .text .text-container {
+    margin:0 auto ;
+    width: 85%;
+
+}
+.phoneimage .text .text-container h2 {
+    color: #fff;
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.phoneimage .text .text-container .p1 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom:  2rem ;
+}
+.phoneimage .text .text-container .p2 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 2rem ;
+}
+.phoneimage .text .text-container a {
+    color: yellow;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.phoneimage .content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.phoneimage .content .pimg-container {
+    background: lightblue;
+   
+    height: 600px;
+  
+    overflow: hidden;
+    scroll-behavior: smooth;
+ 
+   
+}
+
+@keyframes yeo {
+    0% {transform: translateY(0px);}
+    100%{
+        transform: translateY(calc(-300px * 1));
+    }
+}
+.phoneimage .content .pimg-container::-webkit-scrollbar {
+    width: 0px;
+}
+.phoneimage .content .pimg-container .ph1 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    display: flex;
+animation:yeo 15s linear 0s infinite ;
+   
+}
+.phoneimage .content .pimg-container .ph1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.phoneimage .content .pimg-container .ph2 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    animation: yeo 15s linear 0s infinite reverse;
+}
+.phoneimage .content .pimg-container .ph2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.phoneimage .content .pimg-container .ph3 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    animation: yeo 10s linear 0s infinite;
+}
+
+.phoneimage .content .pimg-container .ph3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.phoneimage .content .pimg-container .ph4 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    animation: yeo 10s linear 0s infinite reverse;
+}
+
+.phoneimage .content .pimg-container .ph4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.imgad {
+    width: 100%;
+    height: auto;
+ 
+}
+.imgad .global-container {
+display: grid;
+    grid-template-columns: 52% 48%;
+    bottom: #fff;
+}
+.imgad .global-container .img-container {
+    padding: 2rem;
+    /* background: lightblue; */
+}
+.imgad .global-container .img-container .img-wrap {
+    width: 90%;
+    height: 700px;
+}
+.imgad .global-container .img-container .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.imgad .global-container .content-container {
+ 
+    width: 100%;
+    /* background: lightcoral; */
+}
+.imgad .global-container .content-container .text {
+    width: 90%;
+    margin-left: 2rem;
+    margin-top: 8rem;
+}
+.imgad .global-container .content-container .text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+.imgad .global-container .content-container .text .p1 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    /* font-weight: 200; */
+}
+.imgad .global-container .content-container .text .p2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+.imgad .global-container .content-container .text a {
+
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+.imgblock {
+    width: 100%;
+    height: auto;
+}
+.imgblock .global-container {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+}
+.imgblock .global-container .text .text-content {
+    width: 90%;
+    margin:3rem auto;
+}
+.imgblock .global-container .text .text-content h2 {
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+.imgblock .global-container .text .text-content  p{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.imgblock .global-container .text .text-content a {
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+.imgblock .global-container .content .imgblockcontent-container {
+    height: 550px;
+    width: 70%;
+    overflow: scroll;
+    margin: 2rem auto;
+}
+.imgblock .global-container .content .imgblockcontent-container::-webkit-scrollbar {
+    width: 0px;
+}
+@keyframes imgblock {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(calc(-300px * 3));
+    }
+}
+.imgblock .global-container .content .imgblockcontent-container .imgblockcontent {
+    height: 350px;
+    width: 100%;
+    animation: imgblock 9s linear 0s infinite normal;
+}
+.imgblock .global-container .content .imgblockcontent-container .imgblockcontent img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.myslide {
+    width: 100%;
+    height: auto;
+    background: lightblue;
+}
+
+.myslide .global-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.myslide .global-container .content .slideshow-container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    /* background: rebeccapurple; */
+}
+
+.myslide .global-container .content .slideshow-container .slide {
+    width: 95%;
+    height: 500px;
+    margin-top: 3rem;
+    display: none;
+}
+.myslide .global-container .content .slideshow-container .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.myslide .global-container .content .slideshow-container .prev,
+.myslide .global-container .content .slideshow-container .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    color:#44579C;
+    font-size: 36px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.myslide .global-container .content .slideshow-container .prev:hover,
+.myslide .global-container .content .slideshow-container .next:hover {
+    background: rgba(0, 0, 0, .7);
+}
+
+.myslide .global-container .content .slideshow-container .next {
+    right: 50px;
+    border-radius: 3px 0 0 3px;
+}
+.myslide .global-container .content .slideshow-container .prev {
+    left: 30px;
+    border-radius: 3px 0 0 3px;
+}
+
+.myslide .global-container .content .slideshow-container .slide .caption {
+    font-size: 18px;
+    text-align: center;
+    left: 47.5%;
+    color: #fff;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    transform: translateX(-50%);
+    background:#141921;
+    width: 380px;
+    border-radius: 5px;
+   
+}
+
+.myslide .global-container .content .slideshow-container .slide .number {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.myslide .global-container .content .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    cursor: pointer;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.myslide .global-container .content .active,
+.myslide .global-container .content .dot:hover {
+    background:#1AC0CC;
+}
+
+.myslide .global-container .content .slideshow-container .fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.myslide .global-container .text {
+    background: #fff;
+}
+
+.myslide .global-container .text .text-container {
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.myslide .global-container .text .text-container h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+
+}
+
+.myslide .global-container .text .text-container .p1,
+.myslide .global-container .text .text-container .p2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.myslide .global-container .text .text-container a {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.road {
+    background: linear-gradient(0deg, rgb(0, 184, 200), rgb(0, 184, 200)),
+     linear-gradient(90deg, rgb(1, 100, 155) -65.42%, rgb(0, 184, 200) 61.98%), rgb(65, 23, 131);
+     overflow: hidden;
+    max-width: 100vw !important;
+}
+.road .global-container {
+    
+    margin: 0px auto;
+    padding: 9.3rem 0px 9rem;
+    position: relative;
+   
+    height: auto;
+  
+     z-index: 1;
+}
+.road .global-container .road-cover1 {
+    position: absolute;
+    left: -450px;
+    bottom:480px;
+    width: 1124px;
+    z-index: -1;
+     height: 500px;
+  }
+.road .global-container .road-cover1 img{
+    object-fit: cover;
+}
+
+
+.road .global-container .road-cover2 {
+    position: absolute;
+    left: -500px;
+    bottom:300px;
+    width: 2300px;
+    height: 800px;
+    z-index: -1;
+}
+.road .global-container .road-cover2 img {
+    object-fit: cover;
+}
+.road .global-container .text-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+
+}
+ .road .global-container .text-container .text1 h1 
+ .road .global-container .text-container .text2 p{
+    width: 100%;
+   }
+.road .global-container .text-container .text1 h1 {
+    font-size: 3.6rem;
+    line-height: 1.3;
+    color: #F6F6F6;
+    text-align: center;
+}
+.road .global-container .text-container .text2 p {
+    font-size: 1.6rem;
+    color: #F6F6F6;
+     text-align: center;
+ }
+.road .global-container .map-container {
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.road .global-container .map-container .roadmap {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+.road .global-container .map-container .roadmap img {
+    width: 100%;
+    height: 100%;
+   object-fit: contain;
+}
+.road .global-container .map-container .map1 {
+ position: absolute;
+ width: 300px;
+ height: 250px;
+
+ left: 30px;
+ bottom: 300px;
+}
+.road .global-container .map-container .map1::before {
+    content: "";
+    height: 200px;
+    position: absolute;
+    border: 1px solid #411783;
+    bottom: 150px;
+    left: 30px;
+    z-index: -1;
+}
+.road .global-container .map-container .map1 .map-img1 {
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+}
+.road .global-container .map-container .map1 .map-img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  
+}
+.road .global-container .map-container  .circle {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #411783;
+ 
+}
+.road .global-container .map-container .map1 .circle1{
+    position: absolute;
+    bottom: 341px;
+    left: 100px;
+}
+
+.road .global-container .map-container .map1 p {
+    color: #F6F6F6;
+    z-index: 1;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    margin-left: 2.3rem;
+}
+.road .global-container .map-container .map1::after {
+    content: "";
+    width: 80px;
+    border: 1px solid #411783;
+    position: absolute;
+    bottom: 349px;
+    left: 30px;
+}
+.road .global-container .map-container .map2 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 200px;
+    bottom: 800px;
+}
+.road .global-container .map-container .map2::before {
+    content: "";
+    position: absolute;
+    height: 160px;
+    border:1px solid #411783;
+    left: 110px;
+    top: 284px;
+}
+.road .global-container .map-container .map2 .map-img2 {
+    width: 300px;
+    height: 400px;
+    z-index: 1;
+    
+}
+.road .global-container .map-container .map2 .map-img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.road .global-container .map-container .map2 .circle2 {
+    position: absolute;
+    top: 440px;
+    left: 100px;
+}
+.road .global-container .map-container .map2 p{
+    color: #F6F6F6;
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.1;
+   
+}
+.road .global-container .map-container .map3 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 340px;
+    bottom: 370px;
+}
+
+.road .global-container .map-container .map3::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    border: 1px solid #411783;
+    left: 210px;
+    top: 70px;
+    z-index: 1;
+}
+
+.road .global-container .map-container .map3 .map-img3 {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+
+}
+
+.road .global-container .map-container .map3 .map-img3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.road .global-container .map-container .map3 .circle3 {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+}
+
+.road .global-container .map-container .map3 p {
+    color: #F6F6F6;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.1;
+
+}
+.road .global-container .map-container .map4 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 640px;
+    bottom: 460px;
+}
+
+.road .global-container .map-container .map4::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    border: 1px solid #411783;
+    left: 80px;
+    top: 190px;
+    z-index: 1;
+}
+
+.road .global-container .map-container .map4 .map-img4 {
+    width: 300px;
+    height: 250px;
+    z-index:2;
+
+}
+
+.road .global-container .map-container .map4 .map-img4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.road .global-container .map-container .map4 .circle4 {
+    position: absolute;
+    top: 320px;
+    left: 70px;
+}
+
+.road .global-container .map-container .map4 p {
+    color: #F6F6F6;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+.road .global-container .map-container .map5 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 580px;
+    bottom: 40px;
+}
+
+.road .global-container .map-container .map5::before {
+    content: "";
+    position: absolute;
+    height: 230px;
+    border: 1px solid #411783;
+    left: 420px;
+    top: 40px;
+    z-index: 1;
+}
+
+.road .global-container .map-container .map5 .map-img5 {
+    width: 300px;
+    height: 250px;
+    z-index: 2;
+
+}
+
+.road .global-container .map-container .map5 .map-img5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.road .global-container .map-container .map5 .circle5 {
+    position: absolute;
+    top: 40px;
+    left: 410px;
+}
+
+.road .global-container .map-container .map5 p {
+    color: #F6F6F6;
+    position: absolute;
+    top: 230px;
+    left: 100px;
+    width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+.card .global-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5rem 0 ;
+}
+.card .global-container h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #000020;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+.card .global-container p {
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.card .global-container .a-container {
+    width: 320px;
+    background: #411783;
+    border-radius: 5px;
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 1px 1px rgba(128, 128, 128, 0.822);
+    
+}
+.card .global-container .a-container a {
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+}
+.card .global-container .a-container a:hover {
+    cursor: pointer;
+    letter-spacing: .2px;
+}
+.card .global-container .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    padding: 0 ;
+    height: auto;
+}
+.card .global-container .content .flex-container {
+    width: 25%;
+    height: auto;
+    margin: 10px 0;
+    
+}
+.card .global-container .content .flex-container .box {
+    width: 250px;height: 300px;
+    border: 25px solid #BEE439;
+    border-radius: 5px;
+    box-shadow:10px 10px 3px 5px #01B5C5;
+    margin:30px ;
+}
+.card .global-container .content .flex-container .box .inbox {
+    width: 200px;height: 250px;
+    border: 2px solid black;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 5px;
+    line-height: 1.1;
+}
+.finalcover .global-container {
+    width: 100%;
+    background:linear-gradient(0deg,#387BAE,#42268A);
+    display: flex;
+    flex-direction: column;
+    
+}
+.finalcover .global-container .text {
+    height: 400px;
+}
+.finalcover .global-container .text h2 {
+    text-align: center;
+    font-size: 3.3rem;
+    color: #fff;
+    margin-top: 6rem;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.finalcover .global-container .text .a-container {
+    width: 350px;
+    padding: 5px;
+    margin: 0 auto;
+    background: yellow;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.678);
+}
+.finalcover .global-container .text .a-container a {
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+  
+}
+.finalcover .global-container .text .a-container a:hover {
+   letter-spacing: .2px;
+}
+.finalcover .global-container .content {
+    width: 100%;
+    height: 600px;
+    background: lightblue;
+}
+.finalcover .global-container .content img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.purpose {
+    background: #141821;
+    padding: 3rem 0;
+}
+.purpose .global-container {
+    width: 850px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.purpose .global-container h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+.purpose .global-container .p1 {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.purpose .global-container .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 1.5rem;
+    
+}
+.purpose .global-container .input-container .text {
+    width: 200px;height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background: #4F5257;
+    border: 1px solid #fff;
+}
+.purpose .global-container .input-container .email {
+    width: 300px;height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background: #4F5257;
+    border: 1px solid #fff;
+}
+.purpose .global-container .input-container input::placeholder {
+    color:#fff;
+    
+}
+.purpose .global-container .input-container button {
+    width: 200px;height: 30px;
+    border-radius: 5px;
+    background:#D8F156;
+    padding: 5px;
+    font-size: 1rem;
+    color: #000;border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.76);
+}
+.purpose .global-container .input-container button:hover {
+    letter-spacing: .3px;
+  }
+.purpose .global-container .p2 {
+    color: #fff;
+    font-size: .6rem;
+    text-align: center;
+}
+.footer .global-container {
+    background: #11141B;
+    padding: 2rem;
+}
+.footer .global-container .list-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+.footer .global-container .list-container .list {
+    width: 15%;
+    height: 300px;
+}
+.footer .global-container .list-container .list h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: .6rem;
+}
+.footer .global-container .list-container .list p {
+    font-size: .9rem;
+    color: #fff;
+}
+.footer .global-container .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.footer .global-container .footer-logo .social i {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 15px;
+}
+.footer .global-container .download {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.footer .global-container .download .playstore {
+    width: 120px;height: 30px;
+    margin-bottom: 6rem;
+    margin: 0  1rem;
+   
+}
+.footer .global-container .download .playstore img {
+    width: 100%;height: 100%;
+    object-fit:cover;
+   
+}
+.footer .global-container .download .applestore {
+    width: 100px;
+    height: 30px;
+    
+}
+.footer .global-container .download .applestore img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+/* media querry........ */
+@media(min-width:1500px) {
+.road .global-container .map-container .map1 {
+        bottom: 1220px;
+    }
+
+    .road .global-container .map-container .map2 {
+        bottom: 20px;
+    }
+
+    .road .global-container .map-container .map3 {
+        bottom: 450px;
+        left: 380px;
+    }
+
+    .road .global-container .map-container .map4 {
+        bottom: 405px;
+        left: 780px;
+    }
+
+    .road .global-container .map-container .map5 {
+        bottom: 100px;
+        left: 580px;
+    }
+}
+@media(min-width:1420px) {
+.road .global-container .map-container .map1 {
+    bottom: 360px;
+}
+.road .global-container .map-container .map2 {
+    bottom: 850px;
+}
+.road .global-container .map-container .map3 {
+    bottom: 450px;
+    left: 380px;
+}
+.road .global-container .map-container .map4 {
+    bottom: 405px;
+    left: 780px;
+}
+.road .global-container .map-container .map5 {
+    bottom: 100px;
+    left: 580px;
+}
+}
+@media(min-width:1550px) {
+    .road .global-container .map-container .map1 {
+        bottom: 430px;
+    }
+
+    .road .global-container .map-container .map2 {
+        bottom: 920px;
+    }
+
+    .road .global-container .map-container .map3 {
+        bottom: 490px;
+        left: 450px;
+    }
+
+    .road .global-container .map-container .map4 {
+        bottom: 515px;
+        left: 780px;
+    }
+
+    .road .global-container .map-container .map5 {
+        bottom: 150px;
+        left: 580px;
+    }
+}
+@media(min-width:1700px) {
+    .road .global-container .map-container .map1 {
+        bottom: 530px;
+    }
+
+    .road .global-container .map-container .map2 {
+        bottom: 990px;
+    }
+
+    .road .global-container .map-container .map3 {
+        bottom: 560px;
+        left: 450px;
+    }
+
+    .road .global-container .map-container .map4 {
+        bottom: 645px;
+        left: 780px;
+    }
+
+    .road .global-container .map-container .map5 {
+        bottom: 200px;
+        left: 580px;
+    }
+}
+@media(max-width:1300px) {
+    .road .global-container .map-container .map1 {
+        left: 5px;
+        bottom: 260px;
+    }
+    .road .global-container .map-container .map2 {
+        bottom: 756px;
+        left: 180px;
+    }
+    .road .global-container .map-container .map3 {
+        bottom: 310px;
+        left: 320px;
+    }
+    .road .global-container .map-container .map4 {
+        bottom: 385px;
+        left: 610px;
+    }
+    .road .global-container .map-container .map5 {
+        bottom: 0px;
+        left: 480px;
+    }
+}
+@media(max-width:1200px) {
+    .road .global-container .map-container .map1 {
+        left: -10px;
+        bottom: 218px;
+    }
+
+    .road .global-container .map-container .map2 {
+        bottom: 700px;
+        left: 155px;
+    }
+
+    .road .global-container .map-container .map3 {
+        bottom: 260px;
+        left: 300px;
+    }
+
+    .road .global-container .map-container .map4 {
+        bottom: 345px;
+        left: 580px;
+    }
+
+    .road .global-container .map-container .map5 {
+        bottom: 0px;
+        left: 400px;
+    }
+   .card .global-container .content .flex-container {
+    width: 50%;
+   }
+   .card .global-container .content .flex-container .box {
+    width: 350px;height: 350px;
+   }
+   .card .global-container .content .flex-container .box .inbox {
+    width: 300px;height: 300px;
+   }
+}
+@media(max-width:1100px) {
+    .road .global-container .map-container .map1 {
+        left: 0px;
+        bottom: 150px;
+        width: 200px;
+        height: 180px;
+    }
+   .road .global-container .map-container .map1::before {
+    left: 110px;
+    z-index: 1;
+    height: 180px;
+    bottom: 180px;
+
+   }
+   .road .global-container .map-container .map1 .map-img1 {
+    width: 170px;
+   }
+   .road .global-container .map-container .map1 p {
+    font-size: .9rem;
+   }
+  .road .global-container .map-container .map1::after {
+    display: none;
+  }
+    .road .global-container .map-container .map2 {
+        bottom: 650px;
+        left: 155px;
+        width: 200px;
+    }
+.road .global-container .map-container .map2 .map-img2 {
+    width: 240px;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+}
+.road .global-container .map-container .map2 p {
+    font-size: 0.9rem;
+    left: 130px;
+    top: 280px;
+}
+    .road .global-container .map-container .map3 {
+        bottom: 260px;
+        left: 270px;
+        width: 200px;
+        height: 180px;
+    }
+.road .global-container .map-container .map3 p {
+    font-size: .9rem;
+}
+    .road .global-container .map-container .map4 {
+        bottom: 365px;
+        left: 550px;
+        width: 200px;
+        height: 180px;
+    }
+.road .global-container .map-container .map4 p {
+    font-size: .9rem;
+}
+    .road .global-container .map-container .map5 {
+        bottom: 20px;
+        left: 300px;
+        width: 180px;
+        height: 160px;
+    }
+ .road .global-container .map-container .map5 .circle5  {
+    top: -10px;
+ }
+.road .global-container .map-container .map5::before {
+    height: 250px;
+    top: -10px;
+}
+ .road .global-container .map-container .map5 p {
+            font-size: .9rem;
+}
+}
+@media(max-width:1000px) {
+.myslide .global-container .content .slideshow-container .next {
+        right: 30px;
+}
+.myslide .global-container .content .slideshow-container .prev {
+        left: 0px;
+}
+.road .global-container .text-container .text1 h1 {
+            font-size: 3rem;
+}
+.road .global-container .text-container .text2 p {
+    font-size: 1.3rem;
+}
+.road .global-container .map-container .map1 {
+    left: 0px;
+    bottom: 80px;
+}
+    
+.road .global-container .map-container .map2 {
+    bottom: 600px;
+    left: 155px;
+}
+    
+.road .global-container .map-container .map3 {
+    bottom: 180px;
+    left: 270px;
+}
+    
+.road .global-container .map-container .map4 {
+    bottom: 335px;
+    left: 500px;
+}
+    
+.road .global-container .map-container .map5 {
+    bottom: 0px;
+    left: 470px;
+}
+.road .global-container .map-container .map5::before {
+left: 200px;
+height: 150px;
+}
+.road .global-container .map-container .map5 .map-img5 {
+    width: 200px;
+    height: 170px;
+}
+.road .global-container .map-container .map5 .circle5 {
+    left: 190px;
+}
+.road .global-container .map-container .map5 p{
+    left: 0;
+    top: 160px;
+}
+}
+@media(max-width:940px) {
+header .header-logo_wrapper .logo-container {
+    width: 120px;
+}
+header .header-logo_wrapper .navbar ul li a {
+    margin-left: 1rem;
+    font-size: 1.2rem ;
+}
+.phoneimage .text .text-container h2 {
+    font-size: 2.1rem;
+    margin-bottom: 1.7rem;
+}
+.phoneimage .text .text-container p {
+        
+     margin-bottom: 1.7rem;
+}
+.road .global-container .map-container .map1 {
+    bottom: 48px;
+}
+.road .global-container .map-container .map2 {
+    bottom: 570px;
+    left: 155px;
+}
+.road .global-container .map-container .map3 {
+    bottom: 170px;
+    left: 190px;
+}
+.road .global-container .map-container .map3::before {
+    top: 0;
+}
+.road .global-container .map-container .map3 .circle3 {
+    top: 0;
+}
+.road .global-container .map-container .map4 {
+    bottom: 355px;
+    left: 450px;
+    width: 180px;
+}
+.road .global-container .map-container .map4::before {
+    left: 50px;
+}
+.road .global-container .map-container .map4 .circle4 {
+    left: 40px;
+}
+.road .global-container .map-container .map4 p {
+    left: 80px;
+}
+.road .global-container .map-container .map5 {
+    left: 390px;
+}
+}
+@media(max-width:900px) {
+    header .header-logo_wrapper .logo-container {
+    width: 110px;
+    }
+    header .header-logo_wrapper .navbar ul li a {
+        margin-left: .9rem;
+        font-size: 1.1rem;
+    }
+    .finalcover .global-container .text {
+        height: 300px;
+    }
+    .finalcover .global-container .text h2 {
+        font-size: 2.6rem;
+        margin-bottom: 1rem;
+    }
+    .finalcover .global-container .text .a-container {
+        width: 300px;
+    }
+    .finalcover .global-container .text .a-container a {
+        font-size: 1.3rem;
+    }
+    .finalcover .global-container .content {
+        height: 450px;
+    }
+}
+
+@media(max-width:860px) {
+    header {
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+    header .header-a_wrapper .fa-bars {
+        display: block;
+    }
+header .header-logo_wrapper .navbar {
+    position: fixed;
+    right: 0;top:80px;
+    width: 60vw;
+        height: 50vh;
+    transition: .3s;
+    opacity: 0;
+    transform: scale(0);
+    transition:.4s linear;
+    z-index: 4;
+    background: var(--violet-);
+
+}
+header .header-logo_wrapper .navbar ul {
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    align-items: center;
+}
+header .header-logo_wrapper .navbar ul li {
+    margin: 1rem 0;
+    
+}
+header .header-logo_wrapper .navbar ul li a {
+    color: #fff;
+}
+header .header-logo_wrapper .nav-toggle {
+top:80px;
+opacity: 1;
+transform: scale(1);
+ }
+ .banner .vector {
+    display: none;
+ }
+ .banner .global-container {
+    flex-direction: column;
+   min-height:1200px;
+    background: #D2F2F5;
+ }
+.banner .global-container .text-container {
+    width: 100%;
+    padding: 0 3%;
+
+}
+.banner .global-container .video-img_container {
+    width: 100%;
+    height: auto;
+    padding: 0 3%;
+    z-index: 40;
+
+}
+.banner .global-container .video-img_container .png-img1 {
+    height: 17rem;
+}
+.banner .global-container .video-img_container .png-img2 {
+    height: 18rem;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail4 {
+    width: 40%;
+    height: 40%;
+    right: -20px;
+    top:-60px;
+
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail6 {
+    top: 278px;
+    right: 80px;
+}
+.testimonials .global-container {
+    flex-direction: column;
+    height: auto;
+}
+.testimonials .global-container .text {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.testimonials .global-container .content {
+    width: 100%;
+    height: auto;
+}
+.testimonials .global-container .content .card-container {
+    width: 98%;
+    display: flex;
+ 
+    overflow-x: none;
+  margin: 0 auto;
+      flex-wrap: wrap;
+        height: auto;
+}
+
+.testimonials .global-container .content .card-container .card {
+    width: 44%;
+    margin:  .7rem;
+}
+.testimonials .testimonials-inside {
+    bottom: 0;
+    right: 0;
+}
+.videoexplain {
+    grid-template-columns: unset;
+    grid-template-rows: 65% 35%;
+    /* height: 1900px; */
+    height: auto;
+}
+.videoexplain .video-content {
+    height: auto;
+   
+}
+
+.videoexplain .video-content .video {
+    height: 550px;
+    width: 100%;
+}
+.videoexplain .video-content .video svg {
+    /* width: 35%; */
+    margin-top: 3rem;
+    height: 600px;
+    object-fit: cover;
+   
+    
+}
+.videoexplain .video-content .video video {
+    height: 576px;
+    width: 266px;
+    margin-top: 3rem;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.videoexplain .text-content {
+    background: lightcyan;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.videoexplain .text-content .text-container {
+    height: auto;
+    margin: 0 auto;
+
+}
+.videoexplain .text-content .text-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+.videoexplain .text-content .text-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: .8rem;
+}
+.videoexplain .text-content .text-container p{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.videoexplain .text-content .text-container a {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.phoneimage {
+    grid-template-columns: unset;
+    grid-template-rows: 40% 60%;
+   background: none;
+   
+}
+.phoneimage .content {
+    margin-top: 0px;
+    margin-bottom: 0;
+    height: auto;
+}
+
+.phoneimage .text {
+    background: #000;
+}
+
+.imgad .global-container {
+    grid-template-columns: unset;
+    grid-template-rows: 55% 45%;
+ 
+    height: auto;
+}
+.imgad .global-container .img-container {
+   height: auto;
+  
+
+}
+.imgad .global-container .img-container .img-wrap {
+    
+    height: 500px;
+}
+.imgad .global-container .img-container .img-wrap img {
+    object-fit: contain;
+}
+.imgad .global-container .content-container .text {
+    margin-top: 4rem;
+}
+.imgad .global-container .content-container .text h2 {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+.imgad .global-container .content-container .text .p1,
+.imgad .global-container .content-container .text .p2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.imgad .global-container .content-container .text a {
+    font-size: 1.2rem;
+     margin-bottom: 1rem;
+}
+.imgblock .global-container {
+    grid-template-columns: unset;
+    grid-template-rows: 50% 50%;
+    background:#F6F6F6;
+}
+.imgblock .global-container .text {
+    grid-row: 2;
+}
+.imgblock .global-container .text .text-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+.imgblock .global-container .text .text-content .p1,
+.imgblock .global-container .text .text-content .p2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.imgblock .global-container .text .text-content a {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.imgblock .global-container .content {
+    grid-row: 1;
+}
+.imgblock .global-container .content .imgblockcontent-container {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    flex-wrap: wrap;
+    background: #000;
+    overflow: scroll;
+
+}
+
+@keyframes hori {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(calc(-300px*2));
+    }
+    
+}
+.imgblock .global-container .content .imgblockcontent-container .imgblockcontent{
+    animation: hori 45s linear 0s infinite normal;
+  
+    height: 350px;
+    margin: 0 1rem;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.imgblock .global-container .content .imgblockcontent-container .imgblockcontent img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.myslide .global-container {
+   
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr ;
+}
+.myslide .global-container .content .slideshow-container .next {
+    right: 110px;
+    }
+.myslide .global-container .content .slideshow-container .prev {
+    left: 70px;
+   }
+   .myslide .global-container .text .text-container h2 {
+        font-size: 1.6rem;
+         margin-bottom: .8rem;
+
+   }
+
+   .myslide .global-container .text .text-container .p1,
+   .myslide .global-container .text .text-container .p2 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+   }
+
+   .myslide .global-container .text .text-container a {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+   }
+   .road .global-container {
+    padding: 3rem 0px 6rem;
+   }
+   .road .global-container .road-cover1,
+   .road .global-container .road-cover2 {
+    display: none;
+   }
+   .road .global-container .text-container .text1 h1 {
+    font-size: 2.5rem;
+   }
+   .road .global-container .text-container .text2 p {
+    font-size: 1.2rem;
+   }
+   .road .global-container .map-container .map1{
+    bottom: 15px;
+    width: 150px;
+   }
+   
+   .road .global-container .map-container .map2{
+    bottom: 450px;
+    left: 100px;
+   }
+   .road .global-container .map-container .map2::before {
+    left: 70px;
+    height: 140px;
+    top: 200px;
+   }
+   .road .global-container .map-container .map2 .circle2 {
+    left: 60px;
+    top: 340px;
+   }
+   .road .global-container .map-container .map2 p {
+    left: 90px;
+   }
+   .road .global-container .map-container .map3 {
+    bottom: 160px;
+    left: 160px;
+   }
+   .road .global-container .map-container .map3::before {
+    left: 150px;
+   }
+   .road .global-container .map-container .map3 .map-img3 {
+    width: 150px;
+   }
+   .road .global-container .map-container .map3 .circle3 {
+    left: 140px;
+   }
+   .road .global-container .map-container .map3 p {
+    left: 0;
+    top: 180px;
+   }
+   .road .global-container .map-container .map4 {
+    bottom: 300px;
+    left: 460px;
+   }
+   .road .global-container .map-container .map4::before {
+    top: 180px;
+    left: 20px;
+   }
+   .road .global-container .map-container .map4 .map-img4 {
+    width: 200px;
+   }
+   .road .global-container .map-container .map4 .circle4 {
+    top: 300px;
+    left: 10px;
+   }
+   .road .global-container .map-container .map4 p {
+    left: 30px;
+    top: 180px;
+    width: 200px;
+    height: 100px;
+   }
+   .road .global-container .map-container .map5 {
+    bottom:-10px;
+    left: 350px;
+   }
+   .road .global-container .map-container .map5 .map-img5 {
+    width: 170px;
+   }
+   .card .global-container h2 {
+    font-size: 1.8rem;
+   }
+   .card .global-container p {
+    font-size: 1.1rem;
+   }
+   .card .global-container .a-container {
+    width: 260px;
+   }
+   .card .global-container .a-container a {
+    font-size: 1.2rem;
+   }
+   .card .global-container .content .flex-container .box {
+    width: 190px;height: 240px;
+    border: 20px solid #BEE439;;
+   }
+   .card .global-container .content .flex-container .box .inbox {
+    width: 150px;height: 200px;
+    font-size: 1.3rem;
+    font-weight: bold;
+   }
+   .purpose .global-container {
+    width: 100%;
+   }
+   .purpose .global-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+   }
+   .purpose .global-container .p1 {
+    height: auto;
+    font-size: .9rem;
+   }
+   .purpose .global-container .input-container .text {
+    width: 150px;
+   }
+   .purpose .global-container .input-container .email {
+    width: 225px;
+   }
+   .purpose .global-container .input-container button {
+    width: 200px;
+   }
+   .footer .global-container .list-container .list h5 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+   }
+   .footer .global-container .list-container .list p {
+    font-size: .7rem;
+   }
+ }
+ @media(max-width:760px) {
+ 
+ header .header-logo_wrapper .logo-container {
+    width: 80px;
+}
+        
+header .header-a_wrapper .sign-in {
+    width: 70px;
+    font-size: .7rem;
+ }
+        
+header .header-a_wrapper .start {
+    width: 10rem;
+     font-size: .7rem;
+}
+ header .header-a_wrapper .fa-bars {
+     margin-left: .4rem;
+}
+ .banner .global-container .video-img_container .thumbnail .thumbnail5 {
+    width: 27%;
+     height: 27%;
+     right:-60px;
+     top: -30px;
+ }
+ .videoexplain .text-content .text-container {
+    width: 88%;
+ }
+ .videoexplain .text-content .text-container h2 {
+     font-size: 1.6rem;
+     margin-bottom: .5rem;
+ }
+
+ .videoexplain .text-content .text-container h3 {
+     font-size: 1.4rem;
+     margin-bottom: .7rem;
+ }
+
+ .videoexplain .text-content .text-container p {
+     font-size: 1rem;
+     margin-bottom: .8rem;
+ }
+
+ .videoexplain .text-content .text-container a {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+ }
+ .phoneimage .text .text-container h2 {
+    font-size: 1.6rem;
+ }
+ .phoneimage .text .text-container .p1,
+  .phoneimage .text .text-container .p2 {
+    margin-bottom: .8rem;
+    font-size: 1.1rem;
+ }
+ .phoneimage .text .text-container a {
+    margin-bottom: 2rem;
+ }
+ .imgad .global-container .img-container .img-wrap {
+     height: 450px;
+        }
+.imgad .global-container .content-container .text {
+    margin-top: 3rem;
+}
+.imgad .global-container .content-container .text h2 {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+.imgad .global-container .content-container .text .p1,
+.imgad .global-container .content-container .text .p2 {
+    font-size: 1rem;
+    margin-bottom: .8rem;
+}
+.imgad .global-container .content-container .text a {
+    font-size: 1.2rem;
+     margin-bottom: 1rem;
+}
+.imgblock .global-container .text .text-content h2 {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.imgblock .global-container .text .text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.imgblock .global-container .text .text-content a {
+    font-size: 1.3rem;
+}
+.myslide .global-container .content .slideshow-container .next {
+    right: 70px;
+}
+.myslide .global-container .content .slideshow-container .prev {
+    left: 30px;
+}
+.road .global-container .map-container .circle {
+    width: 15px;height: 15px;
+}
+
+ .road .global-container .map-container .map1 {
+    bottom: 73px;
+ }
+ .road .global-container .map-container .map1::before {
+    height: 110px;
+    bottom: 120px;
+    left: 120px;
+ }
+ .road .global-container .map-container .map1 .map-img1 {
+    width: 110px;
+ }
+ .road .global-container .map-container .map1 .circle1 {
+    bottom: 230px;
+    left:114px ;
+ }
+ .road .global-container .map-container .map1 p {
+    font-size: .7rem;
+    position: absolute;
+    bottom: 40px;
+ }
+ .road .global-container .map-container .map2 {
+    bottom: 410px;
+ }
+
+ .road .global-container .map-container .map2 .map-img2 {
+    width: 130px;
+ }
+ .road .global-container .map-container .map2 .circle2 {
+    left: 64px;
+ }
+ .road .global-container .map-container .map2 p {
+    font-size:  0.7rem; 
+    top: 250px;
+    width: 200px;
+ }
+  .road .global-container .map-container .map3 {
+    bottom: 120px;
+  }
+ .road .global-container .map-container .map3 .map-img3 {
+    width: 110px;
+ }
+ .road .global-container .map-container .map3::before {
+    left: 130px;
+ }
+ .road .global-container .map-container .map3 .circle3 {
+    left: 123px;
+ }
+  .road .global-container .map-container .map3 p {
+    font-size: .7rem;
+    width: 170px;
+  }
+ .road .global-container .map-container .map4 {
+    left: 400px;
+    bottom: 260px;
+ }
+ .road .global-container .map-container .map4::before {
+    top: 150px;
+ }
+ .road .global-container .map-container .map4 .map-img4 {
+    width: 130px;
+ }
+ .road .global-container .map-container .map4 .circle4 {
+    top: 270px;
+    left: 13px;
+ }
+ .road .global-container .map-container .map4 p {
+    font-size: .7rem;
+    width: 175px;
+ }
+ .road .global-container .map-container .map5 {
+    left: 340px;
+ }
+ .road .global-container .map-container .map5::before {
+    left: 130px;
+    top: 20px;
+    height: 100px;
+ }
+ .road .global-container .map-container .map5 .map-img5 {
+    width: 120px;
+ }
+ .road .global-container .map-container .map5 .circle5 {
+    top: 20px;
+    left: 124px;
+ }
+ .road .global-container .map-container .map5 p {
+    font-size: .7rem;
+    width: 180px;
+    top: 130px;
+ }
+ .footer .global-container .list-container .list {
+    width: 30%;
+    height: 200px;
+ }
+ }
+ @media(max-width:690px) {
+.road .global-container .map-container .map1 {
+    bottom: 44px;
+   
+}
+ .road .global-container .map-container .map2 {
+    bottom: 385px;
+ }
+ .road .global-container .map-container .map3 {
+     bottom: 75px;
+ }
+  .road .global-container .map-container .map4 {
+     bottom:240px ;
+     left: 375px;
+  }
+   .road .global-container .map-container .map5 {
+    left: 330px;
+   }
+   .finalcover .global-container .text {
+       height: 240px;
+   }
+
+   .finalcover .global-container .text h2 {
+       font-size: 2rem;
+       margin-bottom: 1rem;
+       margin-top: 2.5rem;
+   }
+
+   .finalcover .global-container .text .a-container {
+       width: 250px;
+   }
+
+   .finalcover .global-container .text .a-container a {
+       font-size: 1.1rem;
+   }
+
+   .finalcover .global-container .content {
+       height: 375px;
+   }
+   .purpose .global-container .input-container {
+    flex-direction: column;
+    align-items: center;
+   }
+   .purpose .global-container .input-container input {
+    margin-bottom: .7rem;
+   }
+   .purpose .global-container .input-container .text {
+    width: 225px;
+   }
+ }
+@media(max-width:650px){
+    .banner .global-container .video-img_container .thumbnail .thumbnail7 {
+        right:200px;
+    }
+.banner .global-container .video-img_container .thumbnail .thumbnail1 {
+    height: 85%;
+}
+.banner .global-container .video-img_container .thumbnail .thumbnail5 {
+    width: 24%;
+    height: 24%;
+    right: -25px;
+}
+.banner .global-container .video-img_container .png-img1 {
+    height: 13rem;
+}
+.banner .global-container .video-img_container .png-img2 {
+    height: 14rem;
+}
+.testimonials .global-container .content .card-container .card {
+    padding: .5rem .4rem ;
+}
+.testimonials .global-container .content .card-container .card .review-people .review-head {
+    margin-bottom: .5rem;
+    line-height: 1.1;
+}
+.testimonials .global-container .content .card-container .card .review-people .review-head h3 {
+    font-size: 1rem;
+}
+.testimonials .global-container .content .card-container .card  p {
+    font-size: .8rem;
+}
+.videoexplain .text-content .text-container {
+    width: 90%;
+}
+.videoexplain .text-content .text-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+}
+.videoexplain .text-content .text-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: .6rem;
+}
+.videoexplain .text-content .text-container p {
+    font-size: .8rem;
+    margin-bottom: .6rem;
+}
+.videoexplain .text-content .text-container a {
+    font-size: 1rem;
+}
+.imgad .global-container .img-container {
+    padding: 1rem;
+}
+.imgad .global-container .img-container .img-wrap {
+    height: 450px;
+}
+.imgad .global-container .content-container .text {
+    margin-top: .5rem;
+
+}
+.imgad .global-container .content-container .text h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.imgad .global-container .content-container .text .p1,
+.imgad .global-container .content-container .text .p2 {
+    margin-bottom: .9rem;
+    font-size: 1.1rem;
+}
+.imgad .global-container .content-container .text a {
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+}
+.imgblock .global-container .text .text-content {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.imgblock .global-container .text .text-content h2 {
+    margin-top: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+}
+
+.imgblock .global-container .text .text-content p {
+    margin-bottom: .9rem;
+    font-size: 1.1rem;
+}
+
+.imgblock .global-container .text .text-content a {
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+    text-decoration: underline;
+}
+.myslide .global-container .content .slideshow-container .next {
+    right: 30px;
+}
+
+.myslide .global-container .content .slideshow-container .prev {
+    left: 0px;
+}
+.footer .global-container .footer-logo .social i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+.footer .global-container .download .playstore {
+    width: 85px;
+    height: 35px;
+}
+.footer .global-container .download .applestore {
+    width: 85px;
+}
+.footer .global-container .download .applestore img {
+    object-fit:cover;
+}
+}
+ @media(max-width:630px) {
+    .road .global-container .text-container .text1 h1 {
+        font-size: 1.8rem;
+    }
+          .road .global-container .text-container .text2 p {
+            font-size: 1rem;
+          }
+    .road .global-container .map-container .map1 {
+        bottom: 14px;
+    }
+    .road .global-container .map-container .map2 {
+        bottom: 345px;
+    }
+    .road .global-container .map-container .map2 p {
+        width: 120px;
+    }
+    .road .global-container .map-container .map3 {
+        bottom: 35px;
+        left: 150px;
+    }
+    .road .global-container .map-container .map3::before {
+        left: 110px;
+    }
+    .road .global-container .map-container .map3 .circle3 {
+        left: 105px;
+        }
+    .road .global-container .map-container .map3 p {
+            width: 120px;
+        }
+    .road .global-container .map-container .map4 {
+        bottom: 220px;
+        left: 330px;
+    }
+    .road .global-container .map-container .map4 p {
+        width: 150px;
+    }
+    .road .global-container .map-container .map5 {
+        left: 290px;
+        bottom: 0px;
+    }
+    .road .global-container .map-container .map5::before {
+        height: 70px;
+        top: 50px;
+    }
+    .road .global-container .map-container .map5 .circle5 {
+    top: 50px;
+    }
+ }
+ @media(max-width:540px){
+    header .header-a_wrapper .sign-in {
+        width: 60px;
+        font-size: .7rem;
+    }
+    header .header-a_wrapper .fa-bars {
+        margin-left: .4rem;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail7 {
+        right:150px;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail1 {
+        height: 80%;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail4 {
+         right: 0;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail5 {
+        right: 0;  
+    }
+    .banner .global-container .video-img_container .png-img1{
+        height: 11rem;
+    }
+    .banner .global-container .video-img_container .png-img2 {
+        height: 12rem;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail6 {
+        top: 240px;
+    }
+    .phoneimage {
+        height: auto;
+        grid-template-rows: 22% 77%;
+    }
+   .phoneimage .text .text-container h2 {
+       font-size: 1.4rem;
+    }
+   .phoneimage .text .text-container .p1,
+   .phoneimage .text .text-container .p2 {
+       margin-bottom: .7rem;
+       font-size: 1.1rem;
+    }
+   .phoneimage .text .text-container a {
+       font-size: 1.1rem;
+       margin-bottom: 1rem;
+    }
+   .phoneimage .content {
+       grid-template-columns: repeat(2,1fr);
+       height: auto;
+    }
+    .phoneimage .content .pimg-container {
+       height: 800px;
+    }
+ 
+    .phoneimage .content .pimg-container .ph3 {
+       animation: yeo 10s linear 0s infinite reverse;
+    }
+    .phoneimage .content .pimg-container .ph4 {
+       animation: yeo 10s linear 0s infinite ;
+    }
+    .imgad {
+       height: auto;
+    }
+   .imgad .global-container {
+       height: auto;
+    }
+    .imgad .global-container .img-container {
+       height: auto;
+    }
+    .imgad .global-container .img-container .img-wrap {
+       margin-top: 1rem;
+       height: 500px;
+    }
+    .imgad .global-container .content-container .text {
+       margin-top: 1rem;
+    }
+    .imgad .global-container .content-container .text h2 {
+       font-size: 1.6rem;
+       margin-bottom: .8rem;
+    }
+    .imgad .global-container .content-container .text .p1,
+    .imgad .global-container .content-container .text .p2{
+       font-size: 1rem;
+       margin-bottom: .8rem;
+    }
+    .imgad .global-container .content-container .text a {
+       font-size: 1.1rem;
+        margin-bottom: .8rem;
+    }
+    .imgblock .global-container .text .text-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
+        margin-top: 1.3rem;
+    }
+    .imgblock .global-container .text .text-content p {
+        font-size: 1rem;
+        margin-bottom: .8rem;
+    }
+    .imgblock .global-container .text .text-content a {
+        font: size 1.1rem ;
+    }
+   .myslide .global-container .text .text-container h2 {
+       font-size: 1.6rem;
+       margin-bottom: .8rem;
+    }
+
+    .myslide .global-container .text .text-container .p1,
+    .myslide .global-container .text .text-container .p2 {
+       font-size: 1rem;
+       margin-bottom: .8rem;
+    }
+
+    .myslide .global-container .text .text-container a {
+       font-size: 1.1rem;
+       margin-bottom: 1rem;
+    }
+    .road .global-container .text-container .text1 h1 {
+        font-size: 1.4rem;
+        margin-bottom: .7rem;
+    }
+    .road .global-container .text-container .text2 p {
+        font-size: .9rem;
+    }
+    .road .global-container .map-container .map1 {
+        bottom: 0;
+    }
+    .road .global-container .map-container .map1::before {
+        left: 90px;
+        top: -40px;
+    }
+    .road .global-container .map-container .map1 .map-img1 {
+        width: 90px;
+    }
+    .road .global-container .map-container .map1 .circle1 {
+        left: 84px ;
+        top: -50px;
+    }
+    .road .global-container .map-container .map1 p {
+        left: -10px;
+        font-size: .6rem;
+        top: 80px;
+        width: 100px;
+    }
+    .road .global-container .map-container .map2 {
+        bottom: 280px;
+    }
+    .road .global-container .map-container .map2::before {
+        left: 40px;
+        height: 100px;
+        top: 220px;
+    }
+    .road .global-container .map-container .map2 .map-img2 {
+        width: 90px;
+    }
+    .road .global-container .map-container .map2 .circle2 {
+        left: 33px;
+        top: 310px;
+    }
+    .road .global-container .map-container .map2 p {
+        font-size: .6rem;
+        width: 130px;
+        top: 230px;
+        left: 50px;
+    }
+    .road .global-container .map-container .map3 {
+        bottom:0px;
+    }
+    .road .global-container .map-container .map3::before {
+        height: 90px;
+        top:40px ;
+    }
+    .road .global-container .map-container .map3 .map-img3 {
+        width: 90px;
+    }
+    .road .global-container .map-container .map3 .circle3 {
+        top: 40px;
+    }
+    .road .global-container .map-container .map3  p {
+        top: 150px;
+        font-size: .6rem;
+    }
+    .road .global-container .map-container .map4 {
+        bottom: 200px;
+        left: 300px;
+    }
+    .road .global-container .map-container .map4 .map-img4 {
+        width: 90px;
+    }
+    .road .global-container .map-container .map4 p {
+        font-size: .6rem;
+        top: 160px;
+    }
+    .road .global-container .map-container .map5 {
+        top: 220px;
+    }
+    .road .global-container .map-container .map5::before {
+        left: 100px;
+    }
+    .road .global-container .map-container .map5 .map-img5 {
+        width: 90px;
+    }
+    .road .global-container .map-container .map5 .circle5 {
+        left: 93px;
+        top: 40px;
+    }
+    .road .global-container .map-container .map5 p {
+        font-size: .6rem;
+    }
+        .card .global-container h2 {
+            font-size: 1.5rem;
+        }
+    
+        .card .global-container p {
+            font-size: .9rem;
+        }
+    
+        .card .global-container .a-container {
+            width: 220px;
+        }
+    
+        .card .global-container .a-container a {
+            font-size: 1rem;
+        }
+    
+        .card .global-container .content .flex-container .box {
+            width: 160px;
+            height: 210px;
+            border: 15px solid #BEE439;
+            box-shadow: 5px 5px 3px 5px #01B5C5;
+        }
+    
+        .card .global-container .content .flex-container .box .inbox {
+            width: 130px;
+            height: 180px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+         .finalcover .global-container .text {
+       height: 240px;
+   }
+
+   .finalcover .global-container .text h2 {
+       font-size: 1.5rem;
+       margin-bottom: 1rem;
+       margin-top: 2.5rem;
+   }
+
+   .finalcover .global-container .text .a-container {
+       width: 250px;
+   }
+
+   .finalcover .global-container .text .a-container a {
+       font-size: 1rem;
+   }
+
+   .finalcover .global-container .content {
+       height: 313px;
+   }
+
+ }
+  @media(max-width:470px) {
+    
+    .road .global-container .map-container .map1 {
+        bottom: -30px;
+    }
+    .road .global-container .map-container .map2 {
+        bottom: 250px;
+        left: 80px;
+    }
+    .road .global-container .map-container .map2 p {
+        width: 100px;
+    }
+    .road .global-container .map-container .map3 {
+        left: 120px;
+        bottom: -20px;
+    }
+    .road .global-container .map-container .map3::before {
+        left: 80px;
+        height: 100px;
+        top: 10px;
+    }
+    .road .global-container .map-container .map3 .circle3 {
+        left: 73px;
+        top: 0px;
+    }
+    .road .global-container .map-container .map4 {
+        left: 220px;
+    }
+    .road .global-container .map-container .map4 p {
+        width: 120px;
+    }
+    .road .global-container .map-container .map5{
+        left: 250px;
+        top: 200px;
+    }
+    .road .global-container .map-container .map5 p {
+        width: 120px;
+    }
+    .card .global-container .content .flex-container .box {
+        width: 140px;height: 190px;
+        border: 10px solid #BEE439
+    }
+    .card .global-container .content .flex-container .box .inbox {
+        width: 120px;height: 170px;
+    }
+  }
+ @media(max-width:440px) {
+    header .header-logo_wrapper .logo-container {
+            width: 60px;
+    }
+    
+     header .header-a_wrapper .sign-in {
+            width: 50px;
+            font-size: .6rem;
+    margin-right: 0.5rem;
+     }
+
+    header .header-a_wrapper .start {
+         width: 7.6rem;
+         font-size: .5rem;
+     }
+    
+    header .header-a_wrapper .fa-bars {
+            margin-left: .3rem;
+            font-size: .8rem
+            ;
+     }
+    .banner .global-container .video-img_container .thumbnail .thumbnail7 {
+           right: 90px;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail1 {
+        height: 75%;
+    }
+    .banner .global-container .video-img_container .thumbnail .thumbnail6 {
+        top: 230px;
+    }
+    .testimonials .global-container .content .card-container .card {
+        width: 90%;
+        height: 12rem;
+        padding: 10px;
+    }
+    .phoneimage .text .text-container .p1,
+    .phoneimage .text .text-container .p2 {
+        margin-bottom: .7rem;
+        font-size: 1rem;
+    }
+   .imgad .global-container .img-container .img-wrap {
+    height: 400px;
+    }
+
+   .imgad .global-container .content-container .text a {
+    font-size: 1rem;
+   }
+   .imgblock .global-container {
+    display: grid;
+    grid-template-rows: 1fr 55%;
+   }
+    .imgblock .global-container .text .text-content h2 {
+           
+     margin-top: 1rem;
+    }
+    
+    .imgblock .global-container .content .imgblockcontent-container {
+    height: 350px;
+     }
+    .myslide .global-container .content .slideshow-container .slide .caption {
+    width: 95%;
+    }
+   .road .global-container {
+    padding-bottom: 7rem;
+   }
+   .road .global-container .map-container .map1 {
+    bottom: -50px;
+   }
+   .road .global-container .map-container .map2 {
+    bottom: 240px;
+    left: 70px;
+   }
+   .road .global-container .map-container .map3 {
+    bottom: -50px;
+   }
+   .road .global-container .map-container .map4 {
+    bottom: 185px;
+    left: 210px;;
+   }
+   .road .global-container .map-container .map5 {
+    left: 245px;
+    top: 170px;
+   }
+  .road .global-container .map-container .map5 p {
+    width: 110px;
+    top: 120px;
+  }
+   .finalcover .global-container .text h2 {
+       font-size: 1.3rem;
+       margin-bottom: 1rem;
+       margin-top: 2.5rem;
+   }
+
+   .finalcover .global-container .text .a-container {
+       width: 250px;
+   }
+
+   .finalcover .global-container .text .a-container a {
+       font-size: .9rem;
+   }
+   .footer .global-container .list-container .list {
+    width: 40%;
+   }
+   .footer .global-container .footer-logo  {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+   }
+   .footer .global-container .download {
+    margin-bottom: .7rem;
+   }
+   .footer .global-container .footer-logo .social {
+    margin-left: 3rem;
+   }
+ }
